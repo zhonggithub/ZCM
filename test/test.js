@@ -153,3 +153,34 @@ control.list({modifiedAt:'(2016-01-14 14:07:02,]', uuid:'{1111frHDRscoqkZbtXP37Q
         console.log(result);
     }
 });
+
+uuid = Date.now().toString();
+var fun = control.createNext({customData: "create next test 251842"}, function(error, result){
+    console.log("=========== create next ===============");
+    if(error)
+        console.log(error);
+    else
+        console.log(result);
+});
+fun.next();
+fun.next();
+
+var updateFun = control.updateNext('uuid', uuid, {customData: 'update next hello 0000 world'}, function(error, result){
+    console.log("=========== update next ===============");
+    if(error)
+        console.log(error);
+    else
+        console.log(result);
+});
+updateFun.next();
+updateFun.next();
+
+var deleteFun = control.deleteNext('uuid', uuid, function(error, result){
+    console.log("=========== delete next ===============");
+    if(error)
+        console.log(error);
+    else
+        console.log(result);
+});
+deleteFun.next();
+deleteFun.next();

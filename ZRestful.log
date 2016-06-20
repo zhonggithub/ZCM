@@ -30,3 +30,73 @@
     at E:\Develop\GitHub\ZRestful\lib\ZControl.js:302:45
 [2016-06-20 23:19:11.181] [ERROR] ZRestful.log - TypeError: Cannot read property '0' of undefined
     at E:\Develop\GitHub\ZRestful\lib\ZControl.js:303:80
+[2016-06-20 23:54:29.245] [ERROR] ZRestful.log - { Error: ER_DUP_ENTRY: Duplicate entry '1466438067241' for key 'PRIMARY'
+    at Query.Sequence._packetToError (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\sequences\Sequence.js:51:14)
+    at Query.ErrorPacket (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\sequences\Query.js:83:18)
+    at Protocol._parsePacket (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\Parser.js:74:12)
+    at Protocol.write (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\Connection.js:109:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:188:7)
+    at readableAddChunk (_stream_readable.js:172:18)
+    at Socket.Readable.push (_stream_readable.js:130:10)
+    at TCP.onread (net.js:542:20)
+    --------------------
+    at Protocol._enqueue (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+    at Connection.query (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\Connection.js:214:25)
+    at _lodash.assign._query (E:\Develop\GitHub\ZRestful\node_modules\knex\lib\dialects\mysql\index.js:124:18)
+    at Promise.module.exports.Promise._execute (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:272:9)
+    at Promise.module.exports.Promise._resolveFromExecutor (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:475:18)
+    at new Promise (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:77:14)
+    at Client._query (E:\Develop\GitHub\ZRestful\node_modules\knex\lib\dialects\mysql\index.js:118:12)
+    at Client.query (E:\Develop\GitHub\ZRestful\node_modules\knex\lib\client.js:187:24)
+    at Runner.<anonymous> (E:\Develop\GitHub\ZRestful\node_modules\knex\lib\runner.js:129:36)
+    at Runner.tryCatcher (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.module.exports.Promise.method [as query] (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at E:\Develop\GitHub\ZRestful\node_modules\knex\lib\runner.js:55:21
+    at tryCatcher (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise.module.exports.Promise._settlePromiseFromHandler (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:504:31)
+    at Promise.module.exports.Promise._settlePromise (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:561:18)
+    at Promise.module.exports.Promise._settlePromise0 (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:606:10)
+    at Promise.module.exports.Promise._settlePromises (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:685:18)
+    at Promise.module.exports.Promise._fulfill (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:630:18)
+    at PromiseArray.module.exports.PromiseArray._resolve (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:125:19)
+    at PromiseArray.module.exports.PromiseArray._promiseFulfilled (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:143:14) code: 'ER_DUP_ENTRY', errno: 1062, sqlState: '23000', index: 0 }
+[2016-06-20 23:54:38.291] [ERROR] ZRestful.log - { Error: ER_DUP_ENTRY: Duplicate entry '1466438076433' for key 'PRIMARY'
+    at Query.Sequence._packetToError (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\sequences\Sequence.js:51:14)
+    at Query.ErrorPacket (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\sequences\Query.js:83:18)
+    at Protocol._parsePacket (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+    at Parser.write (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\Parser.js:74:12)
+    at Protocol.write (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\Connection.js:109:28)
+    at emitOne (events.js:96:13)
+    at Socket.emit (events.js:188:7)
+    at readableAddChunk (_stream_readable.js:172:18)
+    at Socket.Readable.push (_stream_readable.js:130:10)
+    at TCP.onread (net.js:542:20)
+    --------------------
+    at Protocol._enqueue (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+    at Connection.query (E:\Develop\GitHub\ZRestful\node_modules\mysql\lib\Connection.js:214:25)
+    at _lodash.assign._query (E:\Develop\GitHub\ZRestful\node_modules\knex\lib\dialects\mysql\index.js:124:18)
+    at Promise.module.exports.Promise._execute (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:272:9)
+    at Promise.module.exports.Promise._resolveFromExecutor (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:475:18)
+    at new Promise (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:77:14)
+    at Client._query (E:\Develop\GitHub\ZRestful\node_modules\knex\lib\dialects\mysql\index.js:118:12)
+    at Client.query (E:\Develop\GitHub\ZRestful\node_modules\knex\lib\client.js:187:24)
+    at Runner.<anonymous> (E:\Develop\GitHub\ZRestful\node_modules\knex\lib\runner.js:129:36)
+    at Runner.tryCatcher (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.module.exports.Promise.method [as query] (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at E:\Develop\GitHub\ZRestful\node_modules\knex\lib\runner.js:55:21
+    at tryCatcher (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise.module.exports.Promise._settlePromiseFromHandler (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:504:31)
+    at Promise.module.exports.Promise._settlePromise (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:561:18)
+    at Promise.module.exports.Promise._settlePromise0 (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:606:10)
+    at Promise.module.exports.Promise._settlePromises (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:685:18)
+    at Promise.module.exports.Promise._fulfill (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise.js:630:18)
+    at PromiseArray.module.exports.PromiseArray._resolve (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:125:19)
+    at PromiseArray.module.exports.PromiseArray._promiseFulfilled (E:\Develop\GitHub\ZRestful\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:143:14) code: 'ER_DUP_ENTRY', errno: 1062, sqlState: '23000', index: 0 }
