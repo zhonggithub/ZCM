@@ -42,9 +42,10 @@ var dbProxy = require('./../lib/ZDBProxy');
 var ZControl = require('./../lib/ZControl');
 var ZElement = require('./../lib/ZElement');
 
+var uuid = Date.now().toString();
 class DBClass{
     constructor(logicDB){
-        this.uuid = !logicDB.uuid ? Date.now().toString() : logicDB.uuid;
+        this.uuid = !logicDB.uuid ? uuid : logicDB.uuid;
         this.customData = logicDB.customData;
     }
 }
@@ -59,9 +60,9 @@ var element = new ZElement('CustomData', null, null, null, DBClass, LogicClass);
 var control = new ZControl(element, {
     "client" : "mysql",
     "connection" : {
-        "host" : "192.168.0.103",
+        "host" : "192.168.6.17",//"192.168.0.103",
         "user" : "root",
-        "password" : "123456",
+        "password" : "123123",//"123456",
         "database" : "AccountsComponentTestDB",
         "port" : 3306
     },
@@ -71,6 +72,31 @@ var control = new ZControl(element, {
     }
 });
 control.create({customData: "test"}, function(error, result){
+    console.log("=========== create ===============");
+    if(error)
+        console.log(error);
+    else
+        console.log(result);
+});
+
+control.update('uuid', uuid, {customData: 'hello world'}, function(error, result){
+    console.log("=========== update ===============");
+    if(error)
+        console.log(error);
+    else
+        console.log(result);
+});
+
+control.retrieve('uuid', uuid, function(error, result){
+    console.log("=========== retrieve ===============");
+    if(error)
+        console.log(error);
+    else
+        console.log(result);
+});
+
+control.delete('uuid', uuid, function(error, result){
+    console.log("=========== delete ===============");
     if(error)
         console.log(error);
     else
