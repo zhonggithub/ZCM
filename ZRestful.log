@@ -1,0 +1,32 @@
+[2016-06-20 22:45:34.087] [ERROR] ZRestful.log - ReferenceError: querystring is not defined
+    at Object.exports.isValidQueryParams (E:\Develop\GitHub\ZRestful\lib\utils.js:207:76)
+    at ZControl.list (E:\Develop\GitHub\ZRestful\lib\ZControl.js:260:36)
+    at Object.<anonymous> (E:\Develop\GitHub\ZRestful\test\test.js:147:9)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Timeout.Module.runMain [as _onTimeout] (module.js:575:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[2016-06-20 23:06:42.548] [ERROR] ZRestful.log - TypeError: Cannot read property 'elementProxy' of undefined
+    at E:\Develop\GitHub\ZRestful\lib\ZControl.js:279:41
+    at ZControl.list (E:\Develop\GitHub\ZRestful\lib\ZControl.js:270:27)
+    at Object.<anonymous> (E:\Develop\GitHub\ZRestful\test\test.js:147:9)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Timeout.Module.runMain [as _onTimeout] (module.js:575:10)
+    at tryOnTimeout (timers.js:224:11)
+    at Timer.listOnTimeout (timers.js:198:5)
+[2016-06-20 23:07:07.063] [ERROR] ZRestful.log - ReferenceError: result is not defined
+    at E:\Develop\GitHub\ZRestful\lib\ZControl.js:291:40
+[2016-06-20 23:17:30.007] [ERROR] ZRestful.log - TypeError: Cannot read property 'push' of undefined
+    at E:\Develop\GitHub\ZRestful\lib\ZControl.js:303:37
+[2016-06-20 23:18:38.189] [ERROR] ZRestful.log - TypeError: Cannot read property 'length' of undefined
+    at E:\Develop\GitHub\ZRestful\lib\ZControl.js:302:45
+[2016-06-20 23:19:11.181] [ERROR] ZRestful.log - TypeError: Cannot read property '0' of undefined
+    at E:\Develop\GitHub\ZRestful\lib\ZControl.js:303:80

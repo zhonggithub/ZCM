@@ -10,7 +10,7 @@
 
 
 var util = require('./../lib/utils');
-var dbProxy = require('./../lib/ZDBProxy');
+//var dbProxy = require('./../lib/ZDBProxy');
 
 // console.log(util.ifReturnNum(10, 5));
 // console.log(util.ifReturnNum('11', 5));
@@ -53,16 +53,57 @@ class LogicClass{
     constructor(dbInfo){
         this.uuid = dbInfo.uuid;
         this.customData = dbInfo.customData;
+        this.createAt = dbInfo.createAt;
+        this.modifiedAt = dbInfo.modifiedAt;
     }
 }
 
-var element = new ZElement('CustomData', null, null, null, DBClass, LogicClass);
+function isValidParams(info){
+    var ret = {is:true, error:''};
+    ret.error = util.mandatoryParams(info, [ 'customData']);
+    if(ret.error)
+    {
+        ret.is = false;
+        return ret;
+    }
+    return ret;
+}
+function isExpandStrValid(expandStr)
+{
+    var expandArray = expandStr.split(',');
+    for(var i = 0; i < expandArray.length; ++i) {
+        switch (expandArray[i]) {
+            case 'tenant':case 'directory':
+            break;
+            default:
+                return false;
+        }
+    }
+    return true;
+}
+
+function isValidQueryCondition(queryCondition) {
+    for(var item in queryCondition)
+    {
+        switch(item)
+        {
+            case 'createAt' : case 'modifiedAt' :case 'expand': case 'uuid':
+            case 'offset': case 'limit':case 'status':case 'orderBy':
+            break;
+            default:
+                return false;
+        }
+    }
+    return true;
+}
+
+var element = new ZElement('CustomData', isValidParams, isValidQueryCondition, isExpandStrValid, DBClass, LogicClass);
 var control = new ZControl(element, {
     "client" : "mysql",
     "connection" : {
-        "host" : "192.168.6.17",//"192.168.0.103",
+        "host" : "192.168.0.103", //"192.168.6.17",//
         "user" : "root",
-        "password" : "123123",//"123456",
+        "password" : "123456", //"123123",//
         "database" : "AccountsComponentTestDB",
         "port" : 3306
     },
@@ -101,4 +142,14 @@ control.delete('uuid', uuid, function(error, result){
         console.log(error);
     else
         console.log(result);
+});
+
+control.list({modifiedAt:'(2016-01-14 14:07:02,]', uuid:'{1111frHDRscoqkZbtXP37Q,T6JbNpdnNsSmY5HY42aBXw}'}, function(error, result){
+    console.log("=========== list ===============");
+    if(error)
+        console.log(error);
+    else{
+        console.log(result.items.length);
+        console.log(result);
+    }
 });
