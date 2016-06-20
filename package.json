@@ -1,0 +1,45 @@
+{
+  "name": "ZRestful",
+  "description": "Sample package for CommonJS. This package demonstrates the required elements of a CommonJS package.",
+  "version": "0.1.0",
+  "keywords": [
+    "ZRestful",
+    "Restful"
+  ],
+  "maintainers": [
+    {
+      "name": "Zz",
+      "email": "quitjie@gmail.com"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Zz",
+      "web": "http://www.byvoid.com/"
+    }
+  ],
+  "bugs": {
+    "mail": "dev@example.com",
+    "web": "http://www.example.com/bugs"
+  },
+  "licenses": [
+    {
+      "type": "GPLv2",
+      "url": "http://www.example.org/licenses/gpl.html"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "http://github.com/BYVoid/mypackage.git"
+    }
+  ],
+  "dependencies": {
+    "knex": "~0.11.6",
+    "node-uuid": "~1.4.7",
+    "mongoose": "~4.5.1",
+    "redis": "~2.6.2",
+    "mysql": "~2.11.1",
+    "log4js": "~0.6.37"
+  }
+}
