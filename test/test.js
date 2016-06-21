@@ -7,40 +7,9 @@
  * Description:
  */
 'use strict'
-
-
 var util = require('./../lib/utils');
-//var dbProxy = require('./../lib/ZDBProxy');
-
-// console.log(util.ifReturnNum(10, 5));
-// console.log(util.ifReturnNum('11', 5));
-// console.log(util.ifReturnStr(10));
-//
-//
-// var db = dbProxy.dbProxy({
-//     "client" : "mysql",
-//     "connection" : {
-//         "host" : "192.168.0.103",
-//         "user" : "root",
-//         "password" : "123456",
-//         "database" : "AccountsComponentTestDB",
-//         "port" : 3306
-//     },
-//     "pool" : {
-//         "min" : 0,
-//         "max" : 7
-//     }
-// });
-// db('CustomData').insert({uuid: '025642', customData:'bbb'})
-//     .then(function(rows){
-//         console.log("success");
-//     })
-//     .catch(function(error){
-//         console.log(error);
-//     });
-
-var ZControl = require('./../lib/ZControl');
-var ZElement = require('./../lib/ZElement');
+var ZControl = require('../index').ZControl;
+var ZElement = require('../index').ZElement;
 
 var uuid = Date.now().toString();
 class DBClass{
@@ -101,9 +70,9 @@ var element = new ZElement('CustomData', isValidParams, isValidQueryCondition, i
 var control = new ZControl(element, {
     "client" : "mysql",
     "connection" : {
-        "host" : "192.168.0.103", //"192.168.6.17",//
+        "host" : "192.168.6.17",//"192.168.0.103", //
         "user" : "root",
-        "password" : "123456", //"123123",//
+        "password" : "123123",//"123456", //
         "database" : "AccountsComponentTestDB",
         "port" : 3306
     },
@@ -144,7 +113,7 @@ control.delete('uuid', uuid, function(error, result){
         console.log(result);
 });
 
-control.list({modifiedAt:'(2016-01-14 14:07:02,]', uuid:'{1111frHDRscoqkZbtXP37Q,T6JbNpdnNsSmY5HY42aBXw}'}, function(error, result){
+control.list({modifiedAt:'(2016-01-14 14:07:02,]', uuid:'{1111frHDRscoqkZbtXP37Q,1466472079424}'}, function(error, result){
     console.log("=========== list ===============");
     if(error)
         console.log(error);

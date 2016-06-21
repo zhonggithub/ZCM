@@ -15,19 +15,13 @@
   "contributors": [
     {
       "name": "Zz",
-      "web": "http://www.byvoid.com/"
+      "web": "https://github.com/zhonggithub"
     }
   ],
   "bugs": {
-    "mail": "dev@example.com",
-    "web": "http://www.example.com/bugs"
+    "mail": "quitjie@gmail.com",
+    "web": "https://github.com/zhonggithub"
   },
-  "licenses": [
-    {
-      "type": "GPLv2",
-      "url": "http://www.example.org/licenses/gpl.html"
-    }
-  ],
   "repositories": [
     {
       "type": "git",

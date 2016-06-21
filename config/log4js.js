@@ -8,7 +8,7 @@
  */
 
 var log4js = {
-    name : 'ZRestful.log',
+    name : 'ZCM.log',
     levels : {
         ZRestfulLog: 'INFO'
     },
