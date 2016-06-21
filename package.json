@@ -1,9 +1,9 @@
 {
-  "name": "ZRestful",
+  "name": "ZCM",
   "description": "Sample package for CommonJS. This package demonstrates the required elements of a CommonJS package.",
   "version": "0.1.0",
   "keywords": [
-    "ZRestful",
+    "ZCM",
     "Restful"
   ],
   "maintainers": [
