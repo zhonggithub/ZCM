@@ -25,7 +25,7 @@
   "repositories": [
     {
       "type": "git",
-      "url": "http://github.com/BYVoid/mypackage.git"
+      "url": "git@github.com:zhonggithub/ZCM.git"
     }
   ],
   "dependencies": {
