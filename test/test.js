@@ -169,6 +169,7 @@ var control1 = new ZControl1(element, {
         "max" : 7
     }
 });
+
 uuid = Date.now().toString();
 control1.create({customData: "control1 create"}, function(error, result){
     console.log("=========== control1 create ===============");
