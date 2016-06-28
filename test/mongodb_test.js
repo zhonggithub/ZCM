@@ -8,7 +8,7 @@
  */
 'use strict'
 var util = require('./../lib/utils');
-var ZControl = require('./../lib/ZControl1');
+var ZControl = require('./../lib/ZControl');
 var ZElement = require('../index').ZElement;
 
 class DBClass{
@@ -65,9 +65,8 @@ function isValidQueryCondition(queryCondition) {
     return true;
 }
 
-var element = new ZElement('CustomData', isValidParams, isValidQueryCondition, isExpandStrValid, DBClass, LogicClass);
-
-var control2 = new ZControl(element, {
+var element = new ZElement('CustomData', isValidParams, isValidQueryCondition, isExpandStrValid, DBClass, LogicClass, {customData: String});
+var control = new ZControl(element, {
     "client" : "mongodb",
     "connection" : {
         "host" : "localhost",
@@ -81,11 +80,21 @@ var control2 = new ZControl(element, {
         "max" : 7
     }
 });
+
+
 var uuid = Date.now().toString();
-control2.create({customData: "control 2 create"}, function(error, result){
-    console.log("=========== control 2 create ===============");
-    if(error)
-        console.log(error);
-    else
-        console.log(result);
-});
+// control.create({customData: "control  create"}, function(error, result){
+//     console.log("=========== control  create ===============");
+//     if(error)
+//         console.log(error);
+//     else
+//         console.log(result);
+// });
+
+// control.list({}, function(error, result){
+//     console.log("=========== control  list ===============");
+//     if(error)
+//         console.log(error);
+//     else
+//         console.log(result);
+// });

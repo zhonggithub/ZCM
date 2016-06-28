@@ -67,10 +67,12 @@ function isValidQueryCondition(queryCondition) {
 }
 
 var element = new ZElement('CustomData', isValidParams, isValidQueryCondition, isExpandStrValid, DBClass, LogicClass);
+
+var ZControl = require('./../lib/ZControl');
 var control = new ZControl(element, {
     "client" : "mysql",
     "connection" : {
-        "host" : "192.168.0.103", //"192.168.6.17",//
+        "host" : "192.168.0.102", //"192.168.6.17",//
         "user" : "root",
         "password" : "123456", //"123123",//
         "database" : "AccountsComponentTestDB",
@@ -81,32 +83,18 @@ var control = new ZControl(element, {
         "max" : 7
     }
 });
-control.create({customData: "test"}, function(error, result){
-    console.log("=========== create ===============");
+
+uuid = Date.now().toString();
+control.create({customData: "control1 create"}, function(error, result){
+    console.log("=========== control1 create ===============");
     if(error)
         console.log(error);
     else
         console.log(result);
 });
 
-control.update('uuid', uuid, {customData: 'hello world'}, function(error, result){
-    console.log("=========== update ===============");
-    if(error)
-        console.log(error);
-    else
-        console.log(result);
-});
-
-control.retrieve('uuid', uuid, function(error, result){
-    console.log("=========== retrieve ===============");
-    if(error)
-        console.log(error);
-    else
-        console.log(result);
-});
-
-control.delete('uuid', uuid, function(error, result){
-    console.log("=========== delete ===============");
+control.update('uuid', uuid, {customData: 'control1 update'}, function(error, result){
+    console.log("=========== control1 update ===============");
     if(error)
         console.log(error);
     else
@@ -114,13 +102,27 @@ control.delete('uuid', uuid, function(error, result){
 });
 
 control.list({modifiedAt:'(2016-01-14 14:07:02,]', uuid:'{1111frHDRscoqkZbtXP37Q,1466472079424}'}, function(error, result){
-    console.log("=========== list ===============");
+    console.log("=========== control1 list ===============");
     if(error)
         console.log(error);
-    else{
-        console.log(result.items.length);
+    else
         console.log(result);
-    }
+});
+
+control.retrieve('uuid', uuid, function(error, result){
+    console.log("=========== control1 retrieve ===============");
+    if(error)
+        console.log(error);
+    else
+        console.log(result);
+});
+
+control.delete('uuid', uuid, function(error, result){
+    console.log("=========== control1 delete ===============");
+    if(error)
+        console.log(error);
+    else
+        console.log(result);
 });
 
 uuid = Date.now().toString();
@@ -153,60 +155,3 @@ var deleteFun = control.deleteNext('uuid', uuid, function(error, result){
 });
 deleteFun.next();
 deleteFun.next();
-
-var ZControl1 = require('./../lib/ZControl1');
-var control1 = new ZControl1(element, {
-    "client" : "mysql",
-    "connection" : {
-        "host" : "192.168.0.103", //"192.168.6.17",//
-        "user" : "root",
-        "password" : "123456", //"123123",//
-        "database" : "AccountsComponentTestDB",
-        "port" : 3306
-    },
-    "pool" : {
-        "min" : 0,
-        "max" : 7
-    }
-});
-
-uuid = Date.now().toString();
-control1.create({customData: "control1 create"}, function(error, result){
-    console.log("=========== control1 create ===============");
-    if(error)
-        console.log(error);
-    else
-        console.log(result);
-});
-
-control1.update('uuid', uuid, {customData: 'control1 update'}, function(error, result){
-    console.log("=========== control1 update ===============");
-    if(error)
-        console.log(error);
-    else
-        console.log(result);
-});
-
-control1.list({modifiedAt:'(2016-01-14 14:07:02,]', uuid:'{1111frHDRscoqkZbtXP37Q,1466472079424}'}, function(error, result){
-    console.log("=========== control1 list ===============");
-    if(error)
-        console.log(error);
-    else
-        console.log(result);
-});
-
-control1.retrieve('uuid', uuid, function(error, result){
-    console.log("=========== control1 retrieve ===============");
-    if(error)
-        console.log(error);
-    else
-        console.log(result);
-});
-
-control1.delete('uuid', uuid, function(error, result){
-    console.log("=========== control1 delete ===============");
-    if(error)
-        console.log(error);
-    else
-        console.log(result);
-});
