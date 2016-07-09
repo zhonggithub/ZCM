@@ -83,18 +83,18 @@ var control = new ZControl(element, {
 
 
 var uuid = Date.now().toString();
-// control.create({customData: "control  create"}, function(error, result){
-//     console.log("=========== control  create ===============");
-//     if(error)
-//         console.log(error);
-//     else
-//         console.log(result);
-// });
+control.create({customData: "control  create"}, function(error, result){
+    console.log("=========== control  create ===============");
+    if(error)
+        console.log(error);
+    else
+        console.log(result);
+});
 
-// control.list({}, function(error, result){
-//     console.log("=========== control  list ===============");
-//     if(error)
-//         console.log(error);
-//     else
-//         console.log(result);
-// });
+control.list({}, function(error, result){
+    console.log("=========== control  list ===============");
+    if(error)
+        console.log(error);
+    else
+        console.log(result);
+});

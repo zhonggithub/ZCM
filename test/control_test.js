@@ -72,7 +72,7 @@ var ZControl = require('./../lib/ZControl');
 var control = new ZControl(element, {
     "client" : "mysql",
     "connection" : {
-        "host" : "192.168.0.102", //"192.168.6.17",//
+        "host" : "192.168.0.103", //"192.168.6.17",//
         "user" : "root",
         "password" : "123456", //"123123",//
         "database" : "AccountsComponentTestDB",
